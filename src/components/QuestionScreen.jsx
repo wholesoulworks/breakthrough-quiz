@@ -32,4 +32,7 @@ export default function QuestionScreen({ question, options, selectedAnswer, onAn
         className="px-10 py-4 text-lg rounded bg-orange-500 hover:bg-orange-600 text-white disabled:opacity-40 disabled:cursor-not-allowed"
       >
         Next
-      </
+      </button>
+    </div>
+  );
+}
