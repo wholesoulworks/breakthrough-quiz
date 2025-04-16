@@ -93,19 +93,32 @@ export default function Quiz() {
       'Healing Binger': "You’ve consumed the truth. But you delay obeying it. Awareness isn’t embodiment."
     };
     return (
-      <div className="text-center space-y-6 max-w-2xl">
-        <h2 className="text-3xl text-[#F97316]">You’re a {type}.</h2>
-        <p className="text-xl">{reveal[type]}</p>
-        <p className="italic">Drop your email to get your full breakdown + personalized toolkit:</p>
-        <iframe
-          src="https://tally.so/embed/your-form-id-here?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-          loading="lazy"
-          width="100%"
-          height="250"
-          frameBorder="0"
-          title="Email Capture Form"
-        ></iframe>
-      </div>
+     <div>
+  <form
+    onSubmit={(e) => {
+      e.preventDefault();
+      // Redirect user after fake email capture
+      if (type === 'Emotional Drowner') window.location.href = '/emotional-drowner';
+      else if (type === 'Label Lover') window.location.href = '/label-lover';
+      else window.location.href = '/healing-binger';
+    }}
+    className="space-y-4"
+  >
+    <input
+      type="email"
+      required
+      placeholder="Enter your email"
+      className="w-full px-4 py-3 rounded bg-[#1A1A1A] border border-gray-700 text-white placeholder-gray-500"
+    />
+    <button
+      type="submit"
+      className="w-full bg-[#F97316] text-black py-3 rounded hover:bg-[#ea580c]"
+    >
+      Send Me the Toolkit
+    </button>
+  </form>
+</div>
+
     );
   }
 
