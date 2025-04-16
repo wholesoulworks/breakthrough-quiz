@@ -1,118 +1,141 @@
 import React, { useState } from 'react';
-import ProgressBar from './ProgressBar';
-import QuestionScreen from './QuestionScreen';
-import ResultsScreen from './ResultsScreen';
 
 const questions = [
   {
-    id: 1,
-    question: "When emotions hit hard, what do you usually do?",
-    options: [
-      { id: 'A', text: "I journal and cry until it passes — I just need to *feel it through*", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "I mentally name what’s happening — ‘This is my trauma/attachment/MBTI showing again’", archetype: 'Label Lover' },
-      { id: 'C', text: "I scroll healing content or find a post that makes me feel seen", archetype: 'Healing Binger' }
-    ]
+    question: "What’s your low-key self-work confession?",
+    answers: {
+      A: "Sometimes crying *is* my action plan.",
+      B: "I can quote my patterns better than I can change them.",
+      C: "Watching healing reels *feels* like I'm doing the work."
+    }
   },
   {
-    id: 2,
-    question: "What actually makes you feel 'safe' in your healing journey?",
-    options: [
-      { id: 'A', text: "Letting it all out, even if I never circle back to what I wrote or said", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "Having a framework or label to help explain myself", archetype: 'Label Lover' },
-      { id: 'C', text: "Watching people talk about healing so I don’t feel alone", archetype: 'Healing Binger' }
-    ]
+    question: "When emotional overwhelm hits, which feels most comforting?",
+    answers: {
+      A: "Releasing it through writing or crying",
+      B: "Naming it with a known pattern (like anxious attachment)",
+      C: "Finding content that reminds me I’m not alone"
+    }
   },
   {
-    id: 3,
-    question: "When you think about your growth, what truth hits the hardest?",
-    options: [
-      { id: 'A', text: "I thought I’d healed — until a repeat situation exposed I hadn’t", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "I’ve evolved how I talk about my issues, but not how I show up in them", archetype: 'Label Lover' },
-      { id: 'C', text: "I’ve convinced myself watching growth content counts as growing", archetype: 'Healing Binger' }
-    ]
+    question: "Which of these gives you a sense of “control” in your growth?",
+    answers: {
+      A: "Getting the feelings out — even if it’s chaotic",
+      B: "Understanding the label or type behind what I’m feeling",
+      C: "Seeing others express what I can’t articulate yet"
+    }
   },
   {
-    id: 4,
-    question: "Be honest: How do you actually use journaling?",
-    options: [
-      { id: 'A', text: "I dump emotions out like a release valve, but don’t challenge what I write", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "I analyze my entries through the lens of my personality/trauma/attachment type", archetype: 'Label Lover' },
-      { id: 'C', text: "I start journaling, but give up when I don’t feel instant clarity", archetype: 'Healing Binger' }
-    ]
+    question: "What quietly scares you most about going all-in with healing?",
+    answers: {
+      A: "Discovering how often I’ve avoided honest self-truth",
+      B: "Losing the comfort of knowing who I am through my labels",
+      C: "Facing the silence where content can’t distract me anymore"
+    }
   },
   {
-    id: 5,
-    question: "Which of these confessions feels the most like a punch to your pride?",
-    options: [
-      { id: 'A', text: "I thought journaling and crying meant I was growing — but I was just venting", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "I’ve used self-awareness to dodge the fact that I’m still messy and imperfect", archetype: 'Label Lover' },
-      { id: 'C', text: "I sound like someone who’s healed — but live like someone who’s still hiding", archetype: 'Healing Binger' }
-    ]
+    question: "Be honest — what best describes your journaling habit?",
+    answers: {
+      A: "I pour it all out but rarely read it back",
+      B: "I edit myself through the lens of my “type” or identity",
+      C: "I journal inconsistently — healing content feels like enough"
+    }
   },
   {
-    id: 6,
-    question: "Which one of these phrases lowkey makes you defensive?",
-    options: [
-      { id: 'A', text: "Feeling your feelings isn’t the same as healing them.", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "You’re not your trauma, your sign, or your story.", archetype: 'Label Lover' },
-      { id: 'C', text: "You don’t need more insight. You need more action.", archetype: 'Healing Binger' }
-    ]
+    question: "Which of these lines hits you in the chest — even if you don’t want it to?",
+    answers: {
+      A: "“Release doesn’t guarantee renewal.”",
+      B: "“You’re not your label. You’re who you’re becoming.”",
+      C: "“You’ve consumed the truth. But you’ve delayed obeying it.”"
+    }
   },
   {
-    id: 7,
-    question: "What’s the version of you you say you’re becoming — but secretly doubt you’ll reach?",
-    options: [
-      { id: 'A', text: "Someone emotionally unshakable and honest", archetype: 'Emotional Drowner' },
-      { id: 'B', text: "Someone who can finally explain who they are", archetype: 'Label Lover' },
-      { id: 'C', text: "Someone who doesn’t need content to stay accountable", archetype: 'Healing Binger' }
-    ]
+    question: "When you imagine the healthiest version of you, what stands out most?",
+    answers: {
+      A: "She feels deeply — but isn’t run by her feelings",
+      B: "She’s self-aware, clear, and deeply known",
+      C: "She applies what she knows — even when it’s uncomfortable"
+    }
   }
 ];
 
-const descriptions = {
-  'Emotional Drowner': "You confuse emotional honesty with transformation. Feeling isn’t the finish line — facing the truth is. It’s time to confront your patterns like your life depends on it.",
-  'Label Lover': "You use labels to describe your dysfunction — instead of disrupt it. You’re not your diagnosis — you’re who you choose to become next.",
-  'Healing Binger': "You consume healing content — but avoid obedience. You’ve confused exposure with embodiment. You don’t need more insight. You need disruption."
+const archetypes = {
+  A: 'Emotional Drowner',
+  B: 'Label Lover',
+  C: 'Healing Binger'
 };
 
 export default function Quiz() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState(null);
 
-  const handleAnswer = (optionId, archetype) => {
-    const updated = [...answers];
-    updated[step] = archetype;
-    setAnswers(updated);
-  };
-
-  const handleNext = () => {
+  const handleAnswer = (choice) => {
+    setAnswers([...answers, choice]);
     if (step < questions.length - 1) {
       setStep(step + 1);
     } else {
-      const count = answers.reduce((acc, archetype) => {
-        acc[archetype] = (acc[archetype] || 0) + 1;
+      // Calculate most frequent answer
+      const tally = answers.reduce((acc, val) => {
+        acc[val] = (acc[val] || 0) + 1;
         return acc;
-      }, {});
-      const final = Object.entries(count).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
+      }, { [choice]: 1 });
+      const final = Object.entries(tally).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
       setResult(final);
     }
   };
 
   if (result) {
-    return <ResultsScreen result={result} description={descriptions[result]} />;
+    const type = archetypes[result];
+    const reveal = {
+      'Emotional Drowner': "You confuse emotional honesty with transformation. Feeling isn’t the finish line — facing the truth is.",
+      'Label Lover': "You name your patterns perfectly — but describing dysfunction isn’t disrupting it.",
+      'Healing Binger': "You’ve consumed the truth. But you delay obeying it. Awareness isn’t embodiment."
+    };
+    return (
+      <div className="text-center space-y-6 max-w-2xl">
+        <h2 className="text-3xl text-[#F97316]">You’re a {type}.</h2>
+        <p className="text-xl">{reveal[type]}</p>
+        <p className="italic">Drop your email to get your full breakdown + personalized toolkit:</p>
+        <iframe
+          src="https://tally.so/embed/your-form-id-here?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="250"
+          frameBorder="0"
+          title="Email Capture Form"
+        ></iframe>
+      </div>
+    );
   }
 
+  const current = questions[step];
   return (
-    <div className="w-full max-w-3xl mx-auto">
-      <ProgressBar progress={((step + 1) / questions.length) * 100} />
-      <QuestionScreen
-        question={questions[step].question}
-        options={questions[step].options}
-        selectedAnswer={answers[step] || ''}
-        onAnswerSelect={handleAnswer}
-        onNext={handleNext}
-      />
+    <div className="max-w-xl w-full space-y-8">
+      <h1 className="text-4xl font-bold text-center text-[#F97316]">What’s Secretly Sabotaging Your Self-Work?</h1>
+      {step === 0 && (
+        <div className="text-gray-300 text-sm text-center leading-relaxed space-y-4">
+          <p>👋 Welcome, Beautiful Mess.</p>
+          <p>You’ve journaled. You’ve cried. You’ve reposted all the right quotes. You *know* the lingo — shadow work, boundaries, healing, patterns. But somewhere between the “aha!” and the actual change… you get stuck.</p>
+          <p>This quiz won’t fix you. But it *will* expose the trap you’ve been calling growth.</p>
+          <p>No sugar. No shame. Just surgical truth and a mirror you can’t scroll past.</p>
+          <p>Let’s find the block before it costs you your breakthrough.</p>
+        </div>
+      )}
+      <div className="bg-[#1A1A1A] p-6 rounded shadow-lg">
+        <h2 className="text-2xl mb-4">{current.question}</h2>
+        <div className="space-y-3">
+          {Object.entries(current.answers).map(([key, text]) => (
+            <button
+              key={key}
+              onClick={() => handleAnswer(key)}
+              className="block w-full bg-[#333] hover:bg-[#F97316] hover:text-black px-4 py-3 rounded text-left"
+            >
+              <strong>{key}.</strong> {text}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
