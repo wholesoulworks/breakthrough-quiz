@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="bg-black min-h-screen text-white font-sans">
       {/* Hero Section */}
-     <section className="mt-12 max-w-xl mx-auto px-6 text-left text-base text-gray-300">
+     <section className="mt-20 max-w-xl mx-auto px-6 text-left text-base text-gray-300">
   <h2 className="text-lg font-semibold text-white mb-3">This Quiz Is For You If…</h2>
   <ul className="list-disc list-inside space-y-2">
     <li>You’ve done the inner work but your patterns still repeat</li>
