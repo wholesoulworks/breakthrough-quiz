@@ -17,22 +17,26 @@ export default function EmailGate({ archetype }) {
       {!submitted ? (
         <>
           <p className="text-gray-300 text-lg">Enter your email to unlock your full breakdown + receive the Savage Self-Awareness Toolkit 💥</p>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="email"
-              required
-              placeholder="you@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-black font-bold py-2 rounded transition"
-            >
-              Send Me the Report 🔥
-            </button>
-          </form>
+     <form
+  action="https://formsubmit.co/your@email.com"
+  method="POST"
+  className="space-y-4"
+>
+  <input type="hidden" name="_captcha" value="false" />
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="you@email.com"
+    className="w-full px-4 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none"
+  />
+  <button
+    type="submit"
+    className="w-full bg-orange-500 hover:bg-orange-600 text-black font-bold py-2 rounded transition"
+  >
+    Send Me the Report 🔥
+  </button>
+</form>
         </>
       ) : (
         <p className="text-green-400 font-semibold">
