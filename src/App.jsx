@@ -29,18 +29,19 @@ function App() {
     🔍 Begin Quiz
   </button>
 
-  <div className="mt-10 text-left text-gray-400 text-sm md:text-base">
-    <h2 className="text-white font-semibold text-center mb-2 text-base md:text-lg">This Quiz Is For You If…</h2>
-    <ul className="list-disc list-inside space-y-1 max-w-md mx-auto">
-      <li>You’ve journaled, healed, and reflected — but still feel stuck</li>
-      <li>You use phrases like “as someone with…” but aren’t changing</li>
-      <li>You know the cycles, the terms, the patterns — and you’re still in them</li>
-      <li>You bounce between breakthroughs and burnout</li>
-      <li>You’re emotionally self-aware — but spiritually exhausted</li>
-      <li>You crave unfiltered truth more than soft motivation</li>
-      <li>You’re not afraid to be called out… you’re afraid to waste more time</li>
-    </ul>
-  </div>
+<div className="mt-12 text-left text-gray-300 text-base md:text-lg">
+  <h2 className="text-white font-semibold text-center mb-4 text-lg md:text-xl">This Quiz Is For You If…</h2>
+  <ul className="list-disc list-inside space-y-3 max-w-2xl mx-auto font-medium leading-relaxed">
+    <li>You’ve journaled, healed, and reflected — but still feel stuck</li>
+    <li>You use phrases like “as someone with…” but aren’t changing</li>
+    <li>You know the cycles, the terms, the patterns — and you’re still in them</li>
+    <li>You bounce between breakthroughs and burnout</li>
+    <li>You’re emotionally self-aware — but spiritually exhausted</li>
+    <li>You crave unfiltered truth more than soft motivation</li>
+    <li>You’re not afraid to be called out… you’re afraid to waste more time</li>
+  </ul>
+</div>
+
 </section>
       )}
 
