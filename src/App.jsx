@@ -52,7 +52,7 @@ function App() {
 
       {/* Quiz Placeholder */}
       <section id="quiz" className="py-24 text-center">
-        <p className="text-white-500 italic">[ 👇 The quiz will live here — coming up next ]</p>
+        <p className="text-gray-500 italic">[ 👇 The quiz will live here — coming up next ]</p>
       </section>
     </div>
   );
