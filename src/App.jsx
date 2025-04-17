@@ -22,7 +22,7 @@ function App() {
             <p>You’ve journaled. You’ve healed.</p>
             <p>You <span className="italic">speak fluent shadow work</span>.</p>
             <p>But you still feel stuck.</p>
-            <p><span className="text-orange-400 font-medium">There’s a reason.</span><br />And it’s sneakier than you think.</p>
+            <p><span className="text-orange-400 font-medium">There’s a reason.</span><br />(And it’s sneakier than you think!)</p>
           </div>
 
           <p className="italic text-sm text-gray-500">
@@ -52,7 +52,7 @@ function App() {
 
       {/* Quiz Placeholder */}
       <section id="quiz" className="py-24 text-center">
-        <p className="text-gray-500 italic">[ 👇 The quiz will live here — coming up next ]</p>
+        <p className="text-white-500 italic">[ 👇 The quiz will live here — coming up next ]</p>
       </section>
     </div>
   );
