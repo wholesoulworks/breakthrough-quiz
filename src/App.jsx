@@ -2,7 +2,7 @@ import React from 'react';
 import AppRoutes from './Routes';
 
 export default function App() {
-  return (
+ return (
   <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-6">
     <div className="max-w-3xl text-center space-y-6">
       <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-orange-500">
