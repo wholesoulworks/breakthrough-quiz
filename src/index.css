@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
+
+:root {
   font-family: 'Montserrat', sans-serif;
 }
 
