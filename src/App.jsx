@@ -11,7 +11,17 @@ function App() {
   return (
     <div className="bg-black min-h-screen text-white font-sans">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center px-6 py-24 text-center">
+     <section className="mt-12 max-w-xl mx-auto px-6 text-left text-base text-gray-300">
+  <h2 className="text-lg font-semibold text-white mb-3">This Quiz Is For You If…</h2>
+  <ul className="list-disc list-inside space-y-2">
+    <li>You’ve done the inner work but your patterns still repeat</li>
+    <li>You crave raw, God-truth clarity — not fluffy affirmations</li>
+    <li>You’re exhausted by your own emotional reruns</li>
+    <li>You’re willing to be uncomfortable if it means you’ll grow</li>
+    <li>You secretly fear you’re the reason you’re still stuck</li>
+  </ul>
+</section>
+
         <div className="max-w-3xl space-y-6">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-orange-500">
             What If It’s <span className="italic text-white">Not</span> Just a Block —<br />
