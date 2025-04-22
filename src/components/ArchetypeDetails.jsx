@@ -54,145 +54,66 @@ const reportContent = {
       "Let your soul shut up and move for once.",
       "You’ve cried enough. It’s time to shift."
     ]
-  },
-  "The Hyperaware Hostage": {
-    sectionTitles: {
-      secret: "Your Super Loud \"Secrets\"",
-      pattern: "Your Pattern, Named",
-      barrier: "The Real Reason You're Still Here"
-    },
-    intro: [
-      "You don’t need more clarity.",
-      "You’ve got all the insight, sis.",
-      "You know your patterns, your parts, your pain… but you’re still not moving.",
-      "Because deep down, you’d rather explain the cycle than exit it.",
-      "That hurt? Whew — yeah. Sorry. And… not sorry.",
-      "Let’s be honest:",
-      "If you ever applied what you know for real… you’d have to stop identifying with it."
-    ],
-    pattern: [
-      "You’ve made breakthroughs a brand. And “doing the work”? That’s become your hobby, not your transformation.",
-      "You know your shadow self better than your best friend.",
-      "You’ve got a whole folder of saved posts that feel like therapy.",
-      "And your toxic trait? Calling self-awareness progress — even when nothing’s changing.",
-      "Be honest: Are you growing — or just getting better at describing the version of you that won’t?"
-    ],
-    barrier: [
-      "You’re over-identified with your insight.",
-      "You defend the dysfunction with clinical precision:",
-      "“I don’t have commitment issues, I have avoidant tendencies.”",
-      "“It’s not that I’m inconsistent — I’m just dysregulated.”",
-      "“I ghosted them to protect my nervous system.”",
-      "You’ve turned every self-sabotage into a statement piece — then called it healing.",
-      "How many times have you journaled “why”... instead of just admitting “because I didn’t want to let it go yet”?"
-    ],
-    truth: [
-      "Insight without surrender is just spiritual cosplay.",
-      "You know better. You’ve known better. And now? You’re curating content about a future you still refuse to step into.",
-      "Knowing is not obedience. Language is not action. Healing content is not healing.",
-      "You are not waiting on a revelation. You’re avoiding a decision."
-    ],
-    way: [
-      "Your insight should’ve built a bridge. Instead, you’ve used it to decorate the cell you still refuse to leave.",
-      "Stop worshipping your wisdom. Start walking it out — even while trembling.",
-      "The version of you that’s still waiting for “when it feels right”? She’s the very reason you keep having to start over.",
-      "What’s the truth you keep rewording to avoid obeying it?"
-    ],
-    challenge: [
-      "For the next 48 hours — no analysis. No language. No identity statements.",
-      "No “my attachment style is…” No “I’m still learning how to…” No “That’s just my trauma response.”",
-      "Just movement.",
-      "Say the thing. Unfollow. Commit. Close the chapter.",
-      "Don’t explain it. Execute it."
-    ]
-  },
-  "The Fat Soul with Starving Feet": {
-    sectionTitles: {
-      secret: "Your Super Loud \"Secrets\"",
-      pattern: "Your Pattern, Named",
-      barrier: "The Real Reason You're Still Here"
-    },
-    intro: [
-      "You’ve consumed enough truth to change your life ten times.",
-      "But change isn’t your issue. Appetite is.",
-      "You’re full of wisdom, podcasts, sermons, captions, journal entries, voice notes, prophetic reels, and your cousin’s therapist's 3-step framework for emotional resilience.",
-      "But you’ve been feeding your soul and starving your feet.",
-      "That content you’re binging? It feels like movement. But it’s become your permission slip to stay seated."
-    ],
-    pattern: [
-      "You don’t run from the truth. You repost it. You quote it.",
-      "You highlight it with a pink gel pen and nod like you just found your entire childhood in a TikTok and need a moment of silence.",
-      "You save the deep stuff for later. And later. And… later.",
-      "You’ve got a collection of “I needed this” moments — but baby, you didn’t do anything with them.",
-      "Be honest: how many journal pages have you filled… that you’ve never let confront your Monday morning?"
-    ],
-    barrier: [
-      "You're not unhealed. You're overfed.",
-      "You’ve made growth a performance — with a snack break in every swipe.",
-      "You know what obedience sounds like. You know what conviction feels like.",
-      "You just keep telling yourself, “I’m almost ready.”",
-      "But spiritual nutrition doesn’t mean anything without muscle memory.",
-      "And you? You’ve got a six-pack of self-awareness... and still spiritually glued to the couch.",
-      "You didn’t come here to feel full. You came here to move."
-    ],
-    truth: [
-      "You’ve consumed so much content you’ve convinced yourself you’ve changed.",
-      "But you haven’t applied what you know. You’ve rehearsed it.",
-      "You’re not stuck because you’re underfed. You’re stuck because you’re well-fed and still seated.",
-      "You don’t need more truth. You need a fast — from feeding without following."
-    ],
-    way: [
-      "It’s time to starve your comfort and give your conviction something to chew on.",
-      "Choose one truth you’ve heard 100 times — and this time? Don’t write about it.",
-      "Don’t fake a praise break and slide into the next reel like obedience isn’t owed.",
-      "Just obey it. Quietly. Without ceremony.",
-      "Let your life finally match your content diet.",
-      "What’s one truth you’re tired of hearing — because deep down, you know it’s been tired of waiting on you?"
-    ],
-    challenge: [
-      "Unfollow 5 “healing” or “growth” accounts. Right now.",
-      "Yes, the ones that post “you’re allowed to rest” and “growth is hard” — because you’ve been resting and scrolling for three years.",
-      "Then? Take the truth you already know… and put it on your feet.",
-      "Don’t speak it. Don’t post it. Walk it."
-    ]
   }
 };
 
 export default function ArchetypeDetails({ archetype }) {
   const content = reportContent[archetype];
 
+  if (archetype !== 'The Tear-Bender') return null;
+
   return (
-    <div className="max-w-3xl mx-auto text-left space-y-8 px-4 py-12">
-      <h2 className="text-3xl font-bold text-orange-400">{archetype}</h2>
+    <div className="max-w-4xl mx-auto bg-white text-black rounded-lg shadow-lg px-8 py-12 space-y-10 font-sans leading-relaxed">
+      <h2 className="text-4xl font-extrabold text-orange-500 text-center uppercase tracking-wider">
+        {archetype}
+      </h2>
 
       <section>
-        <h3 className="text-xl font-semibold text-white mb-2">{content.sectionTitles.secret}</h3>
-        {content.intro.map((line, i) => <p key={i} className="text-gray-300 mb-3">{line}</p>)}
+        <h3 className="text-xl font-bold text-gray-800 border-b border-gray-300 pb-2 mb-4">
+          {content.sectionTitles.secret}
+        </h3>
+        {content.intro.map((line, i) => (
+          <p key={i} className="text-lg text-gray-700 mb-4">{line}</p>
+        ))}
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold text-white mb-2">{content.sectionTitles.pattern}</h3>
-        {content.pattern.map((line, i) => <p key={i} className="text-gray-300 mb-3">{line}</p>)}
+        <h3 className="text-xl font-bold text-gray-800 border-b border-gray-300 pb-2 mb-4">
+          {content.sectionTitles.pattern}
+        </h3>
+        {content.pattern.map((line, i) => (
+          <p key={i} className="text-lg text-gray-700 mb-4">{line}</p>
+        ))}
       </section>
 
       <section>
-        <h3 className="text-xl font-semibold text-white mb-2">{content.sectionTitles.barrier}</h3>
-        {content.barrier.map((line, i) => <p key={i} className="text-gray-300 mb-3">{line}</p>)}
+        <h3 className="text-xl font-bold text-gray-800 border-b border-gray-300 pb-2 mb-4">
+          {content.sectionTitles.barrier}
+        </h3>
+        {content.barrier.map((line, i) => (
+          <p key={i} className="text-lg text-gray-700 mb-4">{line}</p>
+        ))}
       </section>
 
-      <section>
-        <h3 className="text-xl font-semibold text-white mb-2">Your Hard Truth</h3>
-        {content.truth.map((line, i) => <p key={i} className="text-gray-300 mb-3">{line}</p>)}
+      <section className="bg-orange-50 border-l-4 border-orange-500 p-6">
+        <h3 className="text-xl font-bold text-orange-700 mb-3">Your Hard Truth</h3>
+        {content.truth.map((line, i) => (
+          <p key={i} className="text-gray-800 text-base mb-3">{line}</p>
+        ))}
       </section>
 
-      <section>
-        <h3 className="text-xl font-semibold text-white mb-2">Your Way Through</h3>
-        {content.way.map((line, i) => <p key={i} className="text-gray-300 mb-3">{line}</p>)}
+      <section className="bg-gray-50 border-l-4 border-gray-400 p-6">
+        <h3 className="text-xl font-bold text-gray-800 mb-3">Your Way Through</h3>
+        {content.way.map((line, i) => (
+          <p key={i} className="text-gray-800 text-base mb-3">{line}</p>
+        ))}
       </section>
 
-      <section>
-        <h3 className="text-xl font-semibold text-white mb-2">Try This</h3>
-        {content.challenge.map((line, i) => <p key={i} className="text-gray-300 mb-3">{line}</p>)}
+      <section className="bg-black text-white rounded-xl p-6 mt-6">
+        <h3 className="text-xl font-bold text-white mb-3">Try This</h3>
+        {content.challenge.map((line, i) => (
+          <p key={i} className="text-white text-base mb-2">{line}</p>
+        ))}
       </section>
     </div>
   );
