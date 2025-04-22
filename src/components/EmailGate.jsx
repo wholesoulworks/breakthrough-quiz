@@ -16,7 +16,7 @@ export default function EmailGate({ archetype }) {
             </h2>
 
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-              You’ll get access to your full report as <span className="font-semibold">{archetype}</span>, plus a bonus copy of the Savage Self-Awareness Toolkit 🔥
+              You’ll get access to your full report as <span className="font-semibold">{archetype}</span>, plus a bonus copy of the Savage Self-Awareness Toolkit.
             </p>
 
             <form
@@ -26,7 +26,6 @@ export default function EmailGate({ archetype }) {
               onSubmit={() => setSubmitted(true)}
             >
               <input type="hidden" name="_captcha" value="false" />
-
               <input
                 type="email"
                 name="email"
@@ -34,12 +33,11 @@ export default function EmailGate({ archetype }) {
                 placeholder="you@email.com"
                 className="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none text-base"
               />
-
               <button
                 type="submit"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-black font-bold py-3 rounded-full text-lg transition"
               >
-                Send Me the Report 🔥
+                Send Me the Report
               </button>
             </form>
           </>
