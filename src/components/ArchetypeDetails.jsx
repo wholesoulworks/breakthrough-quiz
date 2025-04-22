@@ -63,56 +63,56 @@ export default function ArchetypeDetails({ archetype }) {
   if (archetype !== 'The Tear-Bender') return null;
 
   return (
-    <div className="max-w-4xl mx-auto bg-white text-black rounded-lg shadow-lg px-8 py-12 space-y-10 font-sans leading-relaxed">
-      <h2 className="text-4xl font-extrabold text-orange-500 text-center uppercase tracking-wider">
+    <div className="max-w-4xl mx-auto bg-white text-black rounded-lg shadow-lg px-8 py-14 space-y-12 font-sans leading-relaxed">
+      <h2 className="text-5xl font-black text-orange-500 text-center uppercase tracking-widest">
         {archetype}
       </h2>
 
       <section>
-        <h3 className="text-xl font-bold text-gray-800 border-b border-gray-300 pb-2 mb-4">
+        <h3 className="text-2xl font-extrabold text-gray-900 border-b-2 border-orange-300 pb-2 mb-6 tracking-tight">
           {content.sectionTitles.secret}
         </h3>
         {content.intro.map((line, i) => (
-          <p key={i} className="text-lg text-gray-700 mb-4">{line}</p>
+          <p key={i} className="text-lg text-gray-700 mb-4 leading-7">{line}</p>
         ))}
       </section>
 
-      <section>
-        <h3 className="text-xl font-bold text-gray-800 border-b border-gray-300 pb-2 mb-4">
+      <section className="bg-gray-50 p-6 rounded-xl">
+        <h3 className="text-2xl font-extrabold text-gray-900 border-b border-gray-300 pb-2 mb-4">
           {content.sectionTitles.pattern}
         </h3>
         {content.pattern.map((line, i) => (
-          <p key={i} className="text-lg text-gray-700 mb-4">{line}</p>
+          <p key={i} className="text-lg text-gray-700 mb-4 leading-7">{line}</p>
         ))}
       </section>
 
-      <section>
-        <h3 className="text-xl font-bold text-gray-800 border-b border-gray-300 pb-2 mb-4">
+      <section className="bg-orange-50 p-6 rounded-xl">
+        <h3 className="text-2xl font-extrabold text-orange-700 border-b border-orange-300 pb-2 mb-4">
           {content.sectionTitles.barrier}
         </h3>
         {content.barrier.map((line, i) => (
-          <p key={i} className="text-lg text-gray-700 mb-4">{line}</p>
+          <p key={i} className="text-gray-800 text-base mb-3 leading-7">{line}</p>
         ))}
       </section>
 
-      <section className="bg-orange-50 border-l-4 border-orange-500 p-6">
-        <h3 className="text-xl font-bold text-orange-700 mb-3">Your Hard Truth</h3>
+      <section className="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-xl">
+        <h3 className="text-xl font-bold text-yellow-800 mb-3 uppercase">Your Hard Truth</h3>
         {content.truth.map((line, i) => (
-          <p key={i} className="text-gray-800 text-base mb-3">{line}</p>
+          <p key={i} className="text-gray-800 text-base mb-3 leading-6">{line}</p>
         ))}
       </section>
 
-      <section className="bg-gray-50 border-l-4 border-gray-400 p-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-3">Your Way Through</h3>
+      <section className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-xl">
+        <h3 className="text-xl font-bold text-blue-800 mb-3 uppercase">Your Way Through</h3>
         {content.way.map((line, i) => (
-          <p key={i} className="text-gray-800 text-base mb-3">{line}</p>
+          <p key={i} className="text-gray-800 text-base mb-3 leading-6">{line}</p>
         ))}
       </section>
 
-      <section className="bg-black text-white rounded-xl p-6 mt-6">
-        <h3 className="text-xl font-bold text-white mb-3">Try This</h3>
+      <section className="bg-black text-white rounded-xl p-6 mt-6 shadow-md">
+        <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">Try This</h3>
         {content.challenge.map((line, i) => (
-          <p key={i} className="text-white text-base mb-2">{line}</p>
+          <p key={i} className="text-white text-base mb-2 leading-6">{line}</p>
         ))}
       </section>
     </div>
