@@ -20,7 +20,7 @@ export default function EmailGate({ archetype }) {
             </p>
 
             <form
-              action="https://formsubmit.co/YOUR@EMAIL.COM"
+              action="https://formsubmit.co/pen2page.fd@gmail.com"
               method="POST"
               className="space-y-4"
               onSubmit={() => setSubmitted(true)}
