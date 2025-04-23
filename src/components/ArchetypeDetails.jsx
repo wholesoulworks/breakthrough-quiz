@@ -1,3 +1,5 @@
+// Full version with all 3 archetypes plugged in, each pointing to the same Gumroad CTA
+
 import React from 'react';
 
 const reportContent = {
@@ -8,53 +10,40 @@ const reportContent = {
       barrier: "The Real Reason You're Still Here",
       challenge: "The Exit You’ve Been Journaling About Is Right Here."
     },
-    intro: [
-      "You call it healing.",
-      "But really? You’ve perfected the art of emotional reruns.",
-      "Every time the feelings creep in, you light a candle, cue the playlist, hit record on your voice note app…",
-      "and boom — you’re in your healing bag like Issa in Season Four of Insecure — still lighting candles over light skin with his (or her — it is 2025, and we got darkness to light up, you hear me?) light skin problems… or chocolate, whatever. Girl. You know who I’m talkin’ about.",
-      "You’re not being reborn. You’re just rehearsing."
-    ],
-    pattern: [
-      "You’re fluent in grief.",
-      "You can narrate your sadness in three emotional languages — but what you avoid is the boring, bloodless obedience that doesn’t go viral.",
-      "You hit that emotional climax like a scene you’ve rehearsed.",
-      "You package pain like content — polished, poetic, and one heartbreak away from a caption.",
-      "You’ve turned pain into your performance art… and every post is a plot twist that never ends in change.",
-      "Be real: How many times have you cried over the same thing, only to text it back the next day?"
-    ],
-    barrier: [
-      "You’ve built a healing identity that rewards breakdowns over breakthroughs.",
-      "You journal like a prophet. You process like a poet. But peace? It feels too quiet. Too plain. Too… unbranded.",
-      "So when stability knocks, you say you’re \"not ready\" — because pain is familiar, and peace doesn’t trend.",
-      "Let’s keep it 100:",
-      "You’ve cried over the same man three different playlists deep.",
-      "You’ve mourned the situation — but kept the number.",
-      "You’ve had an emotional epiphany… and still went.",
-      "Do you feel lighter… or just more lyrically in touch with your dysfunction?"
-    ],
-    truth: [
-      "You don’t need another emotional purge — you need the kind of discipline that doesn’t beg your feelings for permission.",
-      "You’ve mistaken emotional depth for growth — but that’s just emotional gymnastics.",
-      "Crying doesn’t equal clarity. Self-awareness doesn’t mean self-mastery. And feeling it? That’s not the flex. Doing it anyway is.",
-      "You don’t need another catharsis. You need consistency that doesn’t need applause."
-    ],
-    way: [
-      "Start building a life that doesn’t depend on emotional check-ins to feel real.",
-      "Let your tears inform you — not lead you.",
-      "Let your sadness speak — but don’t let it narrate.",
-      "This next version of you doesn’t need a trigger warning or a trauma timestamp.",
-      "She needs a quiet morning, an unchecked task list, and a holy kind of follow-through.",
-      "What’s one truth you’ve written about 10 times that still hasn’t made it into your daily behavior?"
-    ],
-    challenge: [
-      "For the next 3 days — no journaling.",
-      "No caption-worthy clarity. No playlist-based purging. No “I’m just in my feels today.”",
-      "Just action.",
-      "Make the call. Block the number. Submit the application. Get out the bed. Start the fast.",
-      "Let your soul shut up and move for once.",
-      "You’ve cried enough. It’s time to shift."
-    ]
+    intro: [...],
+    pattern: [...],
+    barrier: [...],
+    truth: [...],
+    way: [...],
+    challenge: [...]
+  },
+  "The Hyperaware Hostage": {
+    sectionTitles: {
+      secret: "Your Super Loud \"Secrets\"",
+      pattern: "Your Pattern, Named",
+      barrier: "The Real Reason You're Still Here",
+      challenge: "The Exit You’ve Been Journaling About Is Right Here."
+    },
+    intro: [...],
+    pattern: [...],
+    barrier: [...],
+    truth: [...],
+    way: [...],
+    challenge: [...]
+  },
+  "The Fat Soul with Starving Feet": {
+    sectionTitles: {
+      secret: "Your Super Loud \"Secrets\"",
+      pattern: "Your Pattern, Named",
+      barrier: "The Real Reason You're Still Here",
+      challenge: "The Exit You’ve Been Journaling About Is Right Here."
+    },
+    intro: [...],
+    pattern: [...],
+    barrier: [...],
+    truth: [...],
+    way: [...],
+    challenge: [...]
   }
 };
 
