@@ -124,7 +124,7 @@ export default function ArchetypeDetails({ archetype }) {
           If this called you out — the Toolkit will walk you out. The <strong>Savage Interruption Invitation</strong> is a 30-day digital weapon for women who are done circling, done collecting, and ready to get up and go. You’ve got the insight. This will help you <em>implement</em>.
         </p>
         <a
-          href="https://yourtoolkitpage.com" // replace with your Gumroad URL
+          href="https://hisme.gumroad.com/l/meafc?_gl=1*j7breb*_ga*Nzk1MDI4OTIyLjE3NDQ3NTcyMjk.*_ga_6LJN6D94N6*MTc0NTQxNjgzMi42LjEuMTc0NTQxOTM1NC4wLjAuMA.."
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-orange-500 hover:bg-orange-600 text-black font-bold py-3 px-6 rounded-full text-lg shadow-lg transition"
