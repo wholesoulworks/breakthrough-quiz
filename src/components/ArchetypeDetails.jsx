@@ -108,7 +108,7 @@ export default function ArchetypeDetails({ archetype }) {
       <section className="bg-white text-center mt-10">
         <h3 className="text-2xl font-extrabold text-orange-600 mb-4">Ready to Actually Move?</h3>
         <p className="text-gray-700 text-base max-w-xl mx-auto mb-6">
-          If this called you out — the Toolkit will walk you out. The <strong>Savage Interruption Invitation</strong> is a 30-day digital weapon for people who don’t want another feel-good worksheet… they want to actually change.
+          If this called you out — the Toolkit will walk you out. The <strong>Savage Interruption Invitation</strong> is a 30-day digital weapon for women who are done circling, done collecting, and ready to get up and go. You’ve got the insight. This will help you *implement.*
         </p>
         <a
           href="https://yourtoolkitpage.com" // replace with your Gumroad URL
